@@ -1,14 +1,16 @@
 'use strict';
 
 function whoAmI(name, age) {
-  console.log('Hi my chris is Doug and I\'m 29 years ol to the console.');
-  console.log('I was born in ' + yearOfBirth(age));
+  if (name && age) {
+    console.log('Hi my chris is Doug and I\'m 29 years ol to the console.');
+    console.log('I was born in ' + yearOfBirth(age));
+  } else {
+    console.log('Arguments not valid');
+  }
+  
 }
 function yearOfBirth(age) {
-  try {
-    if (age < 0) throw new Error('The age cannot be negative.');
-  } catch (e) {
-    throw new Error('Age must be a positive number');
-  }
+  if (age < 0) throw new Error('The age cannot be negative.');
+  return 2018 - age;
 }
-whoAmI('chris', "25");
+whoAmI('Jill', 27);

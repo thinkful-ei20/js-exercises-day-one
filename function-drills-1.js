@@ -13,4 +13,4 @@ function yearOfBirth(age) {
   if (age < 0) throw new Error('The age cannot be negative.');
   return 2018 - age;
 }
-whoAmI('Jill', '27');
+whoAmI('Jill', 27);

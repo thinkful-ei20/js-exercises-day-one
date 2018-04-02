@@ -5,6 +5,10 @@ function whoAmI(name, age) {
   console.log('I was born in ' + yearOfBirth(age));
 }
 function yearOfBirth(age) {
-  return yearOfBirth = 2018 - age;
+  try {
+    if (age < 0) throw new Error('The age cannot be negative.');
+  } catch (e) {
+    throw new Error('Age must be a positive number');
+  }
 }
-whoAmI('chris', 25);
+whoAmI('chris', "25");
